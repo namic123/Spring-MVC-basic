@@ -34,5 +34,11 @@ public class HelloServlet extends HttpServlet {
         response.getWriter().write("hello "+username); // 페이지에 텍스트 출력
 
         // 위와 같이 요청과 응답을 서블릿에서 만들어준다.
+
+        // 서블릿 정리
+        // 1. HTTP 요청
+        // 2. WAS에서 HTTP 요청메시지를 기반으로 HttpServletRequest 객체 생성
+        // 3. 요청에 해당하는 urlPatterns 매핑을 하여 서블릿 객체 실행(HttpServletResponse 작성 등)
+        // 4. response 메세지 사용자에게 응답
     }
 }
