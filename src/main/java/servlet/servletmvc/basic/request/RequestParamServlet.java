@@ -24,10 +24,20 @@ public class RequestParamServlet extends HttpServlet {
         System.out.println("-------------------------------------------------------------");
 
         System.out.println("[단일 파라미터 조회 - start]");
-        String username = request.getParameter("username");
+        String username = request.getParameter("username"); // 하나의 파라미터 이름에서 하나의 값을 읽을 때 사용
         String age = request.getParameter("age");
         System.out.println("username = " + username);
         System.out.println("age = " + age);
         System.out.println("[단일 파라미터 조회 - end]");
+
+        System.out.println("-------------------------------------------------------------");
+
+        System.out.println("[이름이 같은 복수 파라미터 조회 - start]");
+        // 중복으로 사용하는 경우는 많지 않음
+        String[] usernames = request.getParameterValues("username");
+        for (String name : usernames){
+            System.out.println("name = " + name);
+        }
+        System.out.println("[이름이 같은 복수 파라미터 조회 - end]");
     }
 }
