@@ -16,3 +16,8 @@
 * HTTP API(REST API)에서 주로 사용, JSON, XML, TEXT
 * 데이터 형식은 주로 JSON 사용
   * post, put, patch
+
+### 참고
+* content-type은 HTTP 메시지 바디의 데이터 형식을 지정한다.
+* 위 GET 쿼리파라미터 방식과 HTML Form 전송 방식은 'application/x-www-form-urlencoded'형식을 사용하므로, 
+* 서버 입장에서 request.getParameter()로 파라미터 조회가 가능하다.
